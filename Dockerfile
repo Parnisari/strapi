@@ -22,6 +22,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copia solo i manifest per sfruttare il layer cache
 COPY package.json yarn.lock* ./
 
+RUN corepack enable && corepack prepare yarn@1.22.22 --activate
+
 # Installa dipendenze (usa yarn classic appena installato)
 RUN yarn install --frozen-lockfile
 

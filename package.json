@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
-  "packageManager": "npm@10.8.1",
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "build": "strapi build",
     "console": "strapi console",
