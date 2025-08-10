@@ -34,10 +34,6 @@ export interface AdminApiToken extends Struct.CollectionTypeSchema {
         minLength: 1;
       }> &
       Schema.Attribute.DefaultTo<''>;
-    encryptedKey: Schema.Attribute.Text &
-      Schema.Attribute.SetMinMaxLength<{
-        minLength: 1;
-      }>;
     expiresAt: Schema.Attribute.DateTime;
     lastUsedAt: Schema.Attribute.DateTime;
     lifespan: Schema.Attribute.BigInteger;
@@ -410,6 +406,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiColorColor extends Struct.CollectionTypeSchema {
   collectionName: 'colors';
   info: {
+    description: '';
     displayName: 'Color';
     pluralName: 'colors';
     singularName: 'color';
@@ -422,9 +419,11 @@ export interface ApiColorColor extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     hexCode: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 7;
-        minLength: 1;
+        minLength: 7;
       }>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::color.color'> &
