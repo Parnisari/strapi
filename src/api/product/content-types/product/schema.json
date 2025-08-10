@@ -49,6 +49,20 @@
     },
     "imagesJson": {
       "type": "json"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

@@ -15,6 +15,15 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "syze_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::syze-type.syze-type"
     }
   }
 }

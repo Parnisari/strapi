@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "tags",
+  "collectionName": "syze_types",
   "info": {
-    "singularName": "tag",
-    "pluralName": "tags",
-    "displayName": "Tag"
+    "singularName": "syze-type",
+    "pluralName": "syze-types",
+    "displayName": "SyzeType"
   },
   "options": {
     "draftAndPublish": true
@@ -12,9 +12,7 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string",
-      "required": true,
-      "unique": true
+      "type": "string"
     },
     "slug": {
       "type": "uid",
