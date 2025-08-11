@@ -9,6 +9,7 @@ module.exports = [
         "http://localhost:3000",
         "https://parnisarife-production.up.railway.app",
         "https://parnisarisrls.it",
+        "https://www.parnisarisrls.it",
       ],
       credentials: true,
     },
